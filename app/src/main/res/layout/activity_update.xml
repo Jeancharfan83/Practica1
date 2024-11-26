@@ -6,41 +6,41 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".AddRecipeActivity">
+    tools:context=".UpdateActivity">
 
     <TextView
-        android:id="@+id/addRecipeHeading"
+        android:id="@+id/editRecipeHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Add Recipe"
+        android:text="Edit Recipe"
         android:textColor="@color/rose"
         android:textSize="24sp" />
 
     <ImageView
-        android:id="@+id/saveButton"
+        android:id="@+id/updateSaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_check"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@id/addRecipeHeading"
+        android:layout_alignTop="@id/editRecipeHeading"
         android:layout_marginEnd="6dp"/>
 
     <EditText
-        android:id="@+id/nameEditText"
+        android:id="@+id/updateNameEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="Enter recipe name"
         android:padding="12dp"
         android:textSize="20sp"
-        android:layout_below="@id/addRecipeHeading"
+        android:layout_below="@id/editRecipeHeading"
         android:layout_marginTop="16dp"
         android:maxLines="1"
         android:fontFamily="@font/poppins"/>
     <EditText
-        android:id="@+id/ingredientsEditText"
+        android:id="@+id/updateIngredientsEditText"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:hint="Enter the ingredients"
@@ -49,10 +49,10 @@
         android:textSize="18sp"
         android:fontFamily="@font/poppins"
         android:background="@color/white"
-        android:layout_below="@id/nameEditText"
+        android:layout_below="@id/updateNameEditText"
         android:layout_marginTop="12dp"/>
     <EditText
-        android:id="@+id/instructionsEditText"
+        android:id="@+id/updateInstructionsEditText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="Enter the instructions"
@@ -61,7 +61,7 @@
         android:textSize="18sp"
         android:fontFamily="@font/poppins"
         android:background="@color/white"
-        android:layout_below="@id/ingredientsEditText"
+        android:layout_below="@id/updateIngredientsEditText"
         android:layout_marginTop="12dp"/>
 
 
