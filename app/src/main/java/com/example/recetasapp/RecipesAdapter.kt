@@ -45,7 +45,7 @@ class RecipesAdapter(private var recipes: List<Recipe>, context: Context) :
         holder.deleteButton.setOnClickListener{
             db.deleteRecipe(recipe.id)
             refreshData(db.getAllRecipes())
-            Toast.makeText(holder.itemView.context, "Recipe Deleted",Toast.LENGTH_SHORT).show()
+            Toast.makeText(holder.itemView.context, R.string.Deleted,Toast.LENGTH_SHORT).show()
         }
     }
 

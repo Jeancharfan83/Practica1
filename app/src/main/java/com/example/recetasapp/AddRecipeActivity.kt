@@ -37,7 +37,7 @@ class AddRecipeActivity : AppCompatActivity() {
             val recipe= Recipe(0,name,ingredients,instructions)
             db.insertRecipes(recipe)
             finish()
-            Toast.makeText(this, "Recipe Saved", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.Deleted, Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">RecetasApp</string>
+    <string name="app_name">RecipesApp</string>
+    <string name="Recipes">Recipes</string>
+    <string name="Ingredients">Ingredients</string>
+    <string name="Instructions">Instructions</string>
+    <string name="Edit_Recipe">Edit Recipe</string>
+    <string name="Enter_recipe_name">Enter recipe name</string>
+    <string name="Enter_the_ingredients">Enter the ingredients</string>
+    <string name="Enter_the_instructions">Enter the instructions</string>
+    <string name="Add_Recipe">Add Recipe</string>
+    <string name="Saved">Recipe Saved</string>
+    <string name="Deleted">Recipe Deleted</string>
+    <string name="Changes">Changes Saved</string>
+    <string name="Exit">Exit</string>
+
 </resources>

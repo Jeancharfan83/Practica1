@@ -15,7 +15,7 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Recipes"
+        android:text="@string/Recipes"
         android:textColor="@color/rose"
         android:textSize="24sp" />
 

@@ -47,7 +47,7 @@ class UpdateRecipeActivity : AppCompatActivity() {
             val updateRecipe= Recipe(recipeId, newName, newIngredients, newInstructions)
             db.updateRecipe(updateRecipe)
             finish()
-            Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.Changes, Toast.LENGTH_SHORT).show()
 
         }
     }

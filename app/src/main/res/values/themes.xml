@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.RecetasApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.RecetasApp" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/rose</item>
         <item name="colorPrimaryVariant">@color/rose</item>
         <item name="android:statusBarColor">@color/rose</item>
-
+        <item name="android:actionMenuTextColor">@color/white</item>
     </style>
 
     <style name="Theme.RecetasApp" parent="Base.Theme.RecetasApp" />
