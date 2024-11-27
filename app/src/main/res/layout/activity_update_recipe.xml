@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".UpdateActivity">
+    tools:context=".UpdateRecipeActivity">
 
     <TextView
         android:id="@+id/editRecipeHeading"

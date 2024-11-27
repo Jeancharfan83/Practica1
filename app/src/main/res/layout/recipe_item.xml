@@ -37,6 +37,13 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="30dp"
                 android:src="@drawable/ic_edit"/>
+
+            <ImageView
+                android:id="@+id/deleteButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_delete"/>
             
         </RelativeLayout>
         
@@ -46,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="Ingredients"
             android:fontFamily="@font/poppins"
-            android:maxLines="2"
+
             android:layout_marginTop="4dp"/>
         <TextView
             android:id="@+id/instructionsTextView"
@@ -54,7 +61,8 @@
             android:layout_height="wrap_content"
             android:text="Instructions"
             android:fontFamily="@font/poppins"
-            android:maxLines="3"
+            android:textColor="@color/gray"
+
             android:layout_marginTop="4dp"/>
 
         

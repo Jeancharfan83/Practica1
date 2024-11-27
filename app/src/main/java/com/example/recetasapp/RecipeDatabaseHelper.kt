@@ -82,18 +82,26 @@ class RecipeDatabaseHelper(context: Context) : SQLiteOpenHelper(
 
     fun getRecipeByID(recipeId: Int): Recipe {
         val db = readableDatabase
-        val query= "SELECT * FROM $TABLE_NAME WHERE $COLUMN_ID = $recipeId"
-        val cursor= db.rawQuery(query, null)
+        val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_ID = $recipeId"
+        val cursor = db.rawQuery(query, null)
         cursor.moveToFirst()
 
-        val id= cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
-        val name= cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME))
-        val ingredients= cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_INGREDIENTS))
-        val instruction= cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_INSTRUCTIONS))
+        val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+        val name = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME))
+        val ingredients = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_INGREDIENTS))
+        val instruction = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_INSTRUCTIONS))
 
         cursor.close()
         db.close()
         return Recipe(id, name, ingredients, instruction)
+    }
+
+    fun deleteRecipe(recipeId: Int) {
+        val db = writableDatabase
+        val whereClause = "$COLUMN_ID= ?"
+        val whereArgs= arrayOf(recipeId.toString())
+        db.delete(TABLE_NAME,whereClause,whereArgs)
+        db.close()
     }
 
 }
