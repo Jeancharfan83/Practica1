@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecipesApp</string>
+    <string name="Recipes">Recetas</string>
+    <string name="Ingredients">ingredientes</string>
+    <string name="Instructions">Instrucciones</string>
+    <string name="Edit_Recipe">Editar Receta</string>
+    <string name="Enter_recipe_name">Introduzca nombre de la receta</string>
+    <string name="Enter_the_ingredients">Introduzca los ingredientes</string>
+    <string name="Enter_the_instructions">Introduzca las instrucciones</string>
+    <string name="Add_Recipe">Agregar Receta</string>
+    <string name="Saved">Receta Guardada</string>
+    <string name="Deleted">Receta Eliminada</string>
+    <string name="Changes">Cambios Guardados</string>
+    <string name="Exit">Salir</string>
+</resources>

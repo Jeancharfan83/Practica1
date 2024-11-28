@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:material="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".AddRecipeActivity">
 
+    <!-- Título de la vista -->
     <TextView
         android:id="@+id/addRecipeHeading"
         android:layout_width="wrap_content"
@@ -15,6 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
+        android:padding="16dp"
         android:text="@string/Add_Recipe"
         android:textColor="@color/rose"
         android:textSize="24sp" />
@@ -23,46 +25,71 @@
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_check"
-        android:layout_alignParentEnd="true"
         android:layout_alignTop="@id/addRecipeHeading"
-        android:layout_marginEnd="6dp"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/ic_check" />
 
-    <EditText
-        android:id="@+id/nameEditText"
+    <!-- EditText para el nombre de la receta (con TextInputLayout) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTextInputLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:hint="@string/Enter_recipe_name"
-        android:padding="12dp"
-        android:textSize="20sp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/addRecipeHeading"
         android:layout_marginTop="16dp"
-        android:maxLines="1"
-        android:fontFamily="@font/poppins"/>
-    <EditText
-        android:id="@+id/ingredientsEditText"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:hint="@string/Enter_the_ingredients"
-        android:gravity="top"
-        android:padding="12dp"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppins"
-        android:background="@color/white"
-        android:layout_below="@id/nameEditText"
-        android:layout_marginTop="12dp"/>
-    <EditText
-        android:id="@+id/instructionsEditText"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="@string/Enter_the_instructions"
-        android:gravity="top"
-        android:padding="12dp"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppins"
-        android:background="@color/white"
-        android:layout_below="@id/ingredientsEditText"
-        android:layout_marginTop="12dp"/>
+        android:padding="8dp"
+        app:hintAnimationEnabled="true">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/Enter_recipe_name"
+            android:padding="16dp"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- EditText para los ingredientes (con TextInputLayout) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ingredientsTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextInputLayout"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ingredientsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="@string/Enter_the_ingredients"
+            android:padding="16dp"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- EditText para las instrucciones (con TextInputLayout) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/instructionsTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ingredientsTextInputLayout"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/instructionsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="@string/Enter_the_instructions"
+            android:padding="12dp"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </RelativeLayout>
