@@ -9,19 +9,19 @@
         android:orderInCategory="100"
         android:title="Back"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/clear_shared"
+        android:iconTint="@color/white"
+        android:orderInCategory="100"
+        android:title=" "
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_exit"
+        android:icon="@drawable/ic_exit"
         android:iconTint="@color/white"
         android:orderInCategory="101"
         android:title="@string/Exit"
         app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/action_add_recipe"
-        android:icon="@drawable/add"
-        android:iconTint="@color/white"
-        android:orderInCategory="102"
-        android:title="Add Recipe"
-        app:showAsAction="ifRoom" />
 </menu>

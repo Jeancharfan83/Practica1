@@ -12,5 +12,9 @@
     <string name="Deleted">Recipe Deleted</string>
     <string name="Changes">Changes Saved</string>
     <string name="Exit">Exit</string>
+    <string name="userName">Name</string>
+    <string name="Continue">Continue</string>
+    <string name="Welcome">Welcome</string>
+    <string name="tellme">We would love to know your name</string>
 
 </resources>

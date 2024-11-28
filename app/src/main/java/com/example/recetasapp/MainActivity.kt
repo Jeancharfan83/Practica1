@@ -1,5 +1,6 @@
 package com.example.recetasapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -37,9 +38,6 @@ class MainActivity : AppCompatActivity() {
         binding.recipesRecyclerview.layoutManager = LinearLayoutManager(this)
         binding.recipesRecyclerview.adapter = recipesAdapter
 
-
-
-
         binding.addButton.setOnClickListener {
             val intent = Intent(this, AddRecipeActivity::class.java)
             startActivity(intent)
@@ -64,19 +62,27 @@ class MainActivity : AppCompatActivity() {
                 onSupportNavigateUp()
                 return true
             }
+            R.id.clear_shared -> {
+                clearPreferences(this)
+                return true
+            }
 
             R.id.action_exit -> {
                 finishAffinity()
                 true
             }
 
-            R.id.action_add_recipe -> {
-                val intent = Intent(this, AddRecipeActivity::class.java)
-                startActivity(intent)
-                true
-            }
-
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true}
+
+    fun clearPreferences(context: Context) {
+        val sharedPreferences = context.getSharedPreferences("username", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
     }
 }

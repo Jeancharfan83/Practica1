@@ -13,4 +13,8 @@
     <string name="Deleted">Receta Eliminada</string>
     <string name="Changes">Cambios Guardados</string>
     <string name="Exit">Salir</string>
+    <string name="userName">Name</string>
+    <string name="Continue">Continue</string>
+    <string name="Welcome">Welcome</string>
+    <string name="tellme">We would like to know your name</string>
 </resources>

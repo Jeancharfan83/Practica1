@@ -1,13 +1,15 @@
 package com.example.recetasapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.recetasapp.databinding.ActivityAddRecipeBinding
-import com.example.recetasapp.databinding.ActivityMainBinding
 
 class AddRecipeActivity : AppCompatActivity() {
 
@@ -38,6 +40,27 @@ class AddRecipeActivity : AppCompatActivity() {
             db.insertRecipes(recipe)
             finish()
             Toast.makeText(this, R.string.Deleted, Toast.LENGTH_SHORT).show()
+        }
+    }
+    // Inflar el menú
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu) // Inflar el archivo XML de menú
+        return true
+    }
+
+    // Manejar los eventos de los elementos del menú
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_back -> {
+                onBackPressed()
+                return true
+            }
+
+            R.id.action_exit -> {
+                finishAffinity()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }
